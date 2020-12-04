@@ -1,0 +1,16 @@
+int get_positive_number(char *msg)
+{
+    int counter = 0;
+    int num;
+    while (counter < 1){
+        printf(msg);
+        if((scanf("%d", &num) == 1) && (getchar() == '\n')){
+            if (num > 0){
+                ++counter;
+                return num;
+            }
+        } else{
+            while(getchar() != '\n');
+        }
+    }
+}
